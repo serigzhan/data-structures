@@ -64,9 +64,21 @@ namespace Tasks
             if (index == 0)
             {
 
-                node.Next = Head;
-                Head.Prev = node;
-                Head = node;
+                if (Head == null)
+                {
+
+                    Head = node;
+                    Last = node;
+
+                }
+                else
+                {
+
+                    node.Next = Head;
+                    Head.Prev = node;
+                    Head = node;
+
+                }
 
                 Length++;
 
