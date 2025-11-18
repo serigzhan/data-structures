@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Tasks
@@ -27,7 +28,12 @@ namespace Tasks
 
         }
 
-        public void Dispose() { }
+        public void Dispose() 
+        {
+
+            GC.SuppressFinalize(this);
+
+        }
 
         public bool MoveNext()
         {

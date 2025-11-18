@@ -6,7 +6,7 @@ namespace Tasks
     public class HybridFlowProcessor<T> : IHybridFlowProcessor<T>
     {
 
-        private IDoublyLinkedList<T> list = new DoublyLinkedList<T>();
+        private readonly DoublyLinkedList<T> list = [];
 
         public T Dequeue()
         {
